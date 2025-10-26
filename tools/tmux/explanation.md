@@ -4,7 +4,7 @@
 
 Terminal multiplexers allow you to have a lot terminals in just one window.
 
-* As a dev ops engineer, you connect to devices remotely using SSH frequently. If the connection stops, the process dies. How can we solve this?
+* Cloud enginners need to connect to devices remotely using SSH frequently. If the conection stops, the process dies. How can we solve this issue?.
 Terminal multiplexers create a server process to prevent connection problems. 
 
 
@@ -35,7 +35,13 @@ Default Mode: Inteded to interact with the pseudo terminal directly.
 
 Command Mode: To send instructions to tmux. Such as create a new window or pane.
 
-Copy mode: To copy things. The user decide when he wants to activate thid mode.
+
+
+Key bindings: Key combinations that are interpreted as commands
+
+Prefix: A key or key combination that, in most of the cases, goes at the begining of a key binding. 
+
+Copy mode: To copy things. The user decide when he wants to activate this mode.
 
 View mode: A mode that is enabled automatically by tmux when commands with output are executed.
 
@@ -44,7 +50,6 @@ Choose mode: It is also enabled automatically. But when a command that needs cho
 Attach: Open a session in a terminal.
 
 Detach: Let the session running in the background.
-
 
 
 
@@ -60,10 +65,5 @@ This file is executed by tmux as soos as it starts running.
 
 
 ---
-
-# Cheatsheet 
-
-
-
 
 
