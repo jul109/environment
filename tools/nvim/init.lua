@@ -8,7 +8,7 @@ vim.opt.number=true
 vim.opt.relativenumber=true
 
 vim.opt.cursorline=true
- 
+
 -- Lines below/above the cursor
 vim.opt.scrolloff=10
 
@@ -28,6 +28,9 @@ vim.opt.expandtab = true
 -- Number of spaces used for each step of (auto)indent.
 vim.opt.shiftwidth = 2
 
+-- Indent 
+vim.keymap.set('n', '<C-S-I>', 'gg=G', { desc = 'Indent entire file' })
+
 
 --Search
 
@@ -41,14 +44,12 @@ vim.opt.iskeyword:append("-")                      -- Treat dash as part of word
 vim.opt.path:append("**")                          -- include subdirectories in search
 
 
-
-
 -- When we we type a ) or ], The cursor will go to the matching  ) for some tenths of second
 vim.opt.showmatch=true
 
 -- This time will be 2 tenths of second.
 vim.opt.matchtime=2
-       
+
 
 
 --LEADER KEY
@@ -106,15 +107,14 @@ vim.keymap.set("n", "<C-S>", ":w<CR>", { desc = "Save file" })
 vim.keymap.set("i", "<C-S>", "<C-\\><C-o>:w<CR>", { desc = "Save file" })
 
 --Exit
-vim.keymap.set("n", "<C-W>", ":q<CR>", { desc = "Exit" })
-vim.keymap.set("i", "<C-W>", "<C-\\><C-o>:q<CR>", { desc = "Exit" })
-vim.keymap.set("t", "<C-W>", "<C-\\><C-n>:<CR>", { desc = "Exit" })
+--vim.keymap.set("i", "<C-W>", "<C-\\><C-o>:q<CR>", { desc = "Exit" })
+--vim.keymap.set("t", "<C-W>", "<C-\\><C-n>:<CR>", { desc = "Exit" })
 
 -- Move lines up/down
-vim.keymap.set("n", "<C-j>", ":m .+1<CR>==", { desc = "Move line down" })
-vim.keymap.set("n", "<C-k>", ":m .-2<CR>==", { desc = "Move line up" })
-vim.keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
-vim.keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
+--vim.keymap.set("n", "<C-j>", ":m .+1<CR>==", { desc = "Move line down" })
+--vim.keymap.set("n", "<C-k>", ":m .-2<CR>==", { desc = "Move line up" })
+--vim.keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
+--vim.keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
 
 -- File navigation
 vim.keymap.set("n", "<A-e>", ":Lexplore | vertical resize 20 <CR>", { desc = "Open file explorer at the left size" })
